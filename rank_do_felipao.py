@@ -1,5 +1,3 @@
-
-
 def score():
     vit = int(input('Digite o número de suas vitórias: '))
     lose = int(input('Digite o número de suas derrotas: '))
@@ -7,8 +5,7 @@ def score():
     return score 
 
 
-def rank_calculator():
-    rank = score()  
+def rank_calculator(rank):  
     if rank < 10:
         nivel = "Ferro"
     elif 10 <= rank <= 20:
@@ -26,8 +23,10 @@ def rank_calculator():
     
     return nivel 
 
+
 vitorias = score()
-resultado = rank_calculator()
+
+resultado = rank_calculator(vitorias) 
 
 
 print(f"O Herói tem {vitorias} vitórias e está no nível de {resultado}")
